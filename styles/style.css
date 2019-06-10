@@ -1,0 +1,411 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  height: auto;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+==============================================================
+General
+==============================================================
+*/
+html, body {height: 100%; }
+body {
+	font-family: "Lato", sans-serif;
+}
+
+h1 {
+	font: 900 96px/120% "lato";	
+	line-height: 1em;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+}
+
+h2 {
+
+	font: 900 35px/120% "Lato";	
+	padding: 0 10px 10px;
+}
+
+h3 {
+	font: 700 45px/120% "Lato";
+	padding: 40px 0;
+	text-align: center;
+}
+
+h4 {
+font: 300 28px "Lato";	
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+#logo {
+	font: 700 24px "Lato", sans-serif;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;	
+}
+
+img {
+	width: 500px;
+}
+ 
+
+/*
+==============================================================
+Navigation
+==============================================================
+*/
+
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#navbar {
+  height: auto;
+	width: 100%;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 15px;
+	margin-bottom: 30px;	
+  }
+
+/*Hide Hamburger*/
+#navbar label, #hamburger {
+	display: none;
+}
+
+/*Menu Items*/
+
+#navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding-top: 45px;
+	padding-right: 140px;
+}
+
+#navbar #logo {
+	padding-top: 30px;
+	padding-left: 100px;
+}
+
+
+#navbar #logo, li {	
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.menu-item {
+	padding-left: 45px;
+
+}
+
+/*
+==============================================================
+Welcome-Section
+==============================================================
+*/
+
+.intro {	
+    background: linear-gradient(41deg, rgba(168,104,210,1) 4%, rgba(253,29,29,0.7721463585434174) 53%, rgba(246,102,150,0.8589810924369747) 80%);
+	padding-top: 7vh;
+	margin-bottom: 4.5vh;
+	min-height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 55% 45%;
+	grid-template-rows: 1.75fr 1.75fr 1.5fr;
+	grid-gap: 20px;	
+  box-sizing: border-box;
+}
+
+.welcome-text {
+	padding-left: 30px;
+	grid-row: 1/3;
+}
+
+.welcome-img {
+	margin-right: 200px;
+	grid-row: 1/3;
+	align-self: center;
+}
+
+.welcome-image {
+	width: 300px;
+}
+
+#welcome-section h1 {
+	color: #fff;
+	font-style: italic;
+}
+
+
+
+/*
+==============================================================
+Project Tiles
+==============================================================
+*/
+
+.wrapper-projects {
+	
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	padding: 45px 60px 0px 60px;
+	margin: 0 30px 45px 30px;
+	grid-row-gap: 30px;
+}
+
+.content {
+	position: relative;
+	width: 90%;
+	max-width: 500px;
+	margin: auto;
+	overflow: hidden;
+	border-radius: 10px;
+  }
+  
+  .content .content-overlay {
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	height: 99%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .content:hover .content-overlay{
+	opacity: 1;
+  }
+  
+  .content-image{
+	width: 100%;
+  }
+  
+  .content-details {
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .content:hover .content-details{
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+  }
+  
+  .content-details h2{
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+  }
+  
+  .content-details p{
+	color: #fff;
+	font-size: 0.8em;
+  }
+  
+  
+  .fadeIn-top{
+	top: 20%;
+  }
+  
+/*
+==============================================================
+Button
+==============================================================
+*/
+.wrapper-button {
+	margin-bottom: 45px;
+}
+.work-button {
+	grid-row: 3/4;
+	padding: 30px 0 0 30px;
+}
+
+.button-link {
+	color: #fff;
+	display: inline-block;
+	padding: 15px 30px;
+	margin: 30px 45px 0 15px;
+	border-radius: 25px;
+	font-family: "Montserrat";
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: #000;
+}
+
+.wrapper-button {
+	display: block;
+	text-align: center;	
+}
+
+.welcome-button {
+ text-align: left;
+}
+
+/*
+==============================================================
+Footer 
+==============================================================
+*/
+
+footer {
+	padding-left: 90px;
+	font-size: 13px;
+	line-height: 1.2em;
+}
+
+
+
+
+/*
+==============================================================
+Media Queries 
+==============================================================
+*/
+
+@media screen and (max-width: 768px){
+  /* Show Hamburger */
+  #navbar label {
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 20px;
+  }
+
+  /* Break down menu items into vertical */
+  #navbar ul li {
+    display: block;
+  }
+  #navbar ul li {
+    border-top: 1px solid #333;
+  }
+
+  /* Toggle show/hide menu on checkbox click */
+  #navbar ul {
+    display: none;
+  }
+  #navbar input:checked ~ ul {
+    display: block;
+  }
+
+  #welcome-section {
+	  display: block;
+    min-height: 100vh;
+  }
+
+  #welcome-section h1 {
+	color: #fff;
+	font-style: italic;
+	font-size: 35px;
+}
+
+
+.welcome-img {
+	width: 50px;
+}
+
+.wrapper {
+	display: block;
+	padding: 20px 0;
+	
+}
+  .content{
+    padding: 20px 0;
+  }
+  
+
+}
+
+@media screen and (max-width: 640px){
+	.wrapper-projects{
+	  display: block;
+	  width: 100%;
+    height: 100vh;
+	}
+  }
+  
+  
+
+
+
+
+
